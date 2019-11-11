@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/dd9b85d38d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="nav">
+  <ul>
+    <li style= "float:left"><a href="test.html" class="active">Home</a></li>
+    <li><a href="#contact_me">Contact Me</a></li>
+    <!-- <li><a href="#">Qualifications</a></li> -->
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#">Resume</a></li>
+    <li><a href="#">About</a></li>
+  </ul>
+
+</div>
+
+<div class="back_img"> </div>
+
+<div class="profile">
+  <img src="myAvatar.png" alt="Sailesh_photo"> <br/>
+  <span class="header">Sailesh Subedi</span>
+  <div class="description">
+    Lorem Ipsum is simply dummy text of the printing and sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+  </div>
+
+  <div class="social_media">
+    <ul>
+      <li> <a href="#"><i class="fab fa-facebook-square"></i></a></li>
+      <li> <a href="#"><i class="fab fa-instagram"></i></a></li>
+      <li> <a href="#"><i class="fab fa-twitter"></i></a></li>
+      <li> <a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+  </ul>
+  </div>
+</div>
+
+
+
+<div id="blog">
+  <div class="container">
+    <h1>Blog</h1>
+    <h2>Blog feature will be back soon</h2>
+
+    <div class="count">
+      <div class="countd">
+        <span id="days">00</span>
+        DAYS
+      </div>
+
+      <div class="countd">
+        <span id="hours">00</span>
+        HOURS
+      </div>
+
+      <div class="countd">
+        <span id="minutes">00</span>
+        MINUTES
+      </div>
+
+      <div class="countd">
+        <span id="seconds">00</span>
+        SECONDS
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- Contact Us -->
+<br/>
+
+<div class="body_contact"></div>
+
+
+<div id="contact_me">
+    <span class="contact_header">Contact Me</span>
+  <div class="input_field">
+      <form action="">
+        <!-- <label for="name">Name:</label> -->
+        <input id = "name" type="text" placeholder="Your name"/>
+
+          <br/>
+        <!-- <label for="email">Your email:</label> -->
+        <input id = "email" type="text" placeholder="Your email"/>
+
+        <!-- <label for="phone">Phone number:</label> -->
+        <input id = "phone" type="text" placeholder="Phone number"/>
+
+          <br>
+          <!-- <label for="comments">Comments:</label> -->
+        <div class="text_area">
+
+          <textarea id = "comments" name="name" rows="8" cols="80" placeholder="Comments"></textarea>
+        </div>
+
+        <button type="button" name="button">Send</button>
+      </form>
+    </div>
+</div>
+
+
+
+<!-- Projects
+  need to be on left side -->
+
+  <script type="text/javascript">
+    var count = new Date("Dec 30,2019 00:00:00").getTime();
+    var x = setInterval(function(){
+      var now = new Date().getTime();
+      var d = count - now;
+      var days = Math.floor(d/(1000*60*60*24));
+      var hours = Math.floor((d%(1000*60*60*24))/(1000*60*60));
+      var minutes = Math.floor((d%(1000*60*60))/(1000*60));
+      var seconds = Math.floor((d%(1000*60))/1000);
+      document.getElementById("days").innerHTML = days;
+      document.getElementById("hours").innerHTML = hours;
+      document.getElementById("minutes").innerHTML = minutes;
+      document.getElementById("seconds").innerHTML = seconds;
+      if(d<= 0){
+        clearInterval(x);
+      }
+    },1000);
+  </script>
+</body>
+</html>
